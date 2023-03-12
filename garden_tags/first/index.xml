@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>first on Hi there! I&#39;m Reza.</title>
+    <link>http://rezaamashi.github.io/garden_tags/first/</link>
+    <description>Recent content in first on Hi there! I&#39;m Reza.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Reza Amashi ©</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://rezaamashi.github.io/garden_tags/first/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World!</title>
+      <link>http://rezaamashi.github.io/garden/hello-world/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden/hello-world/</guid>
+      <description>How I set up this beautiful website with Org-mode</description>
+    </item>
+    
+  </channel>
+</rss>

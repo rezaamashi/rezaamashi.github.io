@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Garden_tags on Hi there! I&#39;m Reza.</title>
+    <link>http://rezaamashi.github.io/garden_tags/</link>
+    <description>Recent content in Garden_tags on Hi there! I&#39;m Reza.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Reza Amashi ©</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://rezaamashi.github.io/garden_tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>first</title>
+      <link>http://rezaamashi.github.io/garden_tags/first/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pertamax</title>
+      <link>http://rezaamashi.github.io/garden_tags/pertamax/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/pertamax/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
