@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on Hi there! I&#39;m Reza.</title>
-    <link>http://rezaamashi.github.io/project_tags/emacs/</link>
+    <link>https://rezaamashi.github.io/project_tags/emacs/</link>
     <description>Recent content in emacs on Hi there! I&#39;m Reza.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amashi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://rezaamashi.github.io/project_tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/project_tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Writing Undergraduate Thesis in Org-mode</title>
-      <link>http://rezaamashi.github.io/projects/ugrad-thesis/</link>
+      <link>https://rezaamashi.github.io/projects/ugrad-thesis/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://rezaamashi.github.io/projects/ugrad-thesis/</guid>
+      <guid>https://rezaamashi.github.io/projects/ugrad-thesis/</guid>
       <description>How I use org-mode for everything, yes Everything, regarding my thesis</description>
     </item>
     
