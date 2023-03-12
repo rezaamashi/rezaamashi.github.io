@@ -6,6 +6,25 @@
     <description>Recent content in Project_tags on Hi there! I&#39;m Reza.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Reza Amashi ©</copyright><atom:link href="http://rezaamashi.github.io/project_tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Reza Amashi ©</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://rezaamashi.github.io/project_tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>http://rezaamashi.github.io/project_tags/linux/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/project_tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux ricing series</title>
+      <link>http://rezaamashi.github.io/project_tags/linux-ricing-series/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/project_tags/linux-ricing-series/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

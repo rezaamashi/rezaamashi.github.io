@@ -9,20 +9,56 @@
     <copyright>Reza Amashi ©</copyright>
     <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://rezaamashi.github.io/garden_tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>first</title>
-      <link>http://rezaamashi.github.io/garden_tags/first/</link>
+      <title>digital garden</title>
+      <link>http://rezaamashi.github.io/garden_tags/digital-garden/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://rezaamashi.github.io/garden_tags/first/</guid>
+      <guid>http://rezaamashi.github.io/garden_tags/digital-garden/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>pertamax</title>
-      <link>http://rezaamashi.github.io/garden_tags/pertamax/</link>
+      <title>emacs</title>
+      <link>http://rezaamashi.github.io/garden_tags/emacs/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://rezaamashi.github.io/garden_tags/pertamax/</guid>
+      <guid>http://rezaamashi.github.io/garden_tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>http://rezaamashi.github.io/garden_tags/github/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://rezaamashi.github.io/garden_tags/hugo/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://rezaamashi.github.io/garden_tags/linux/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>org-mode</title>
+      <link>http://rezaamashi.github.io/garden_tags/org-mode/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/garden_tags/org-mode/</guid>
       <description></description>
     </item>
     
