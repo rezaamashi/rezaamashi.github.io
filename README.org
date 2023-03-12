@@ -1,0 +1,5 @@
+#+title: Rezaamashi's Personal Website
+#+author: Reza Amashi
+
+* Overview
+This repository is the public facing submodule of my hugo built website
