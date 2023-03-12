@@ -18,15 +18,6 @@
     </item>
     
     <item>
-      <title>Hello World!</title>
-      <link>https://rezaamashi.github.io/projects/hello-world/</link>
-      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://rezaamashi.github.io/projects/hello-world/</guid>
-      <description>How I set up this beautiful website with Org-mode</description>
-    </item>
-    
-    <item>
       <title>Reza Amashi</title>
       <link>https://rezaamashi.github.io/about/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>

@@ -9,15 +9,6 @@
     <copyright>Reza Amashi ©</copyright>
     <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World!</title>
-      <link>https://rezaamashi.github.io/projects/hello-world/</link>
-      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://rezaamashi.github.io/projects/hello-world/</guid>
-      <description>How I set up this beautiful website with Org-mode</description>
-    </item>
-    
-    <item>
       <title>Setting up Plymouth in Runit</title>
       <link>https://rezaamashi.github.io/projects/plymouth_runit/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
