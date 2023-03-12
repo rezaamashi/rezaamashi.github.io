@@ -17,5 +17,14 @@
       <description>How to set up Plymouth on Artix-Runit</description>
     </item>
     
+    <item>
+      <title>Writing Undergraduate Thesis in Org-mode</title>
+      <link>http://rezaamashi.github.io/projects/ugrad-thesis/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://rezaamashi.github.io/projects/ugrad-thesis/</guid>
+      <description>How I use org-mode for everything, yes Everything, regarding my thesis</description>
+    </item>
+    
   </channel>
 </rss>
