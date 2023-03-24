@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Digital Garden on Hi there! I&#39;m Reza.</title>
+    <title>Digital Garden on Reza Amashi</title>
     <link>https://rezaamashi.github.io/garden/</link>
-    <description>Recent content in Digital Garden on Hi there! I&#39;m Reza.</description>
+    <description>Recent content in Digital Garden on Reza Amashi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amashi ©</copyright>
     <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/garden/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Practice of Digital Gardening</title>
+      <link>https://rezaamashi.github.io/garden/digital-garden-practice/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/digital-garden-practice/</guid>
+      <description>What make it different from normal blogging?</description>
+    </item>
+    
+    <item>
+      <title>On Parasocial Relationship and Simp Economy</title>
+      <link>https://rezaamashi.github.io/garden/parasocial-simp-economy/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/parasocial-simp-economy/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hello World!</title>
       <link>https://rezaamashi.github.io/garden/hello-world/</link>
