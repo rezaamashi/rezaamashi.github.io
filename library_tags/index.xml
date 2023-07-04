@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Library_tags on Reza Amashi</title>
-    <link>https://rezaamashi.github.io/library_tags/</link>
-    <description>Recent content in Library_tags on Reza Amashi</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Reza Amashi ©</copyright><atom:link href="https://rezaamashi.github.io/library_tags/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Library_tags on Reza Amashi</title><link>https://rezaamashi.github.io/library_tags/</link><description>Recent content in Library_tags on Reza Amashi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Reza Amashi ©</copyright><atom:link href="https://rezaamashi.github.io/library_tags/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

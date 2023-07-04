@@ -1,342 +1,123 @@
-<!DOCTYPE html>
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRSJECV048"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-WRSJECV048');
-    </script>
-    
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@200;300;400;500;600&family=Encode+Sans+Semi+Condensed:wght@400&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/all.min.css">
-    <link disabled id="dark-mode-theme" rel="stylesheet" href="https://rezaamashi.github.io/css/dark.css">
-    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/my_style.css">
-    
-    
-    
-    <title>Reza Amashi | Hello World!</title>
-    <meta name="description" content="How I set up this beautiful website with Org-mode">
-</head>
-<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="https://rezaamashi.github.io/">
-            
-            <b style="font-weight: 800;">RA</b>
-            
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto mt-2 mt-lg-0"><li class='nav-item '>
-                    <a class="nav-link" href="https://rezaamashi.github.io/garden/"> Digital Garden</a>
-                </li>
-            <li class='nav-item '>
-                    <a class="nav-link" href="https://rezaamashi.github.io/projects/"> Projects</a>
-                </li>
-            <li class='nav-item '>
-                    <a class="nav-link" href="https://rezaamashi.github.io/library/"> Library</a>
-                </li>
-            <li class='nav-item '>
-                    <a class="nav-link" href="https://rezaamashi.github.io/about/"> About</a>
-                </li>
-             
-            <li class="nav-item px-2 pt-1">
-                <a class="btn fas fa-moon" id="dark-mode-toggle"></a>
-            </li>
-            </ul>
-        </div>
-    </div>
-</nav><div id="content">
-
-<div class="container" style="max-width: 800px;">
-    <div class="py-4 rounded-3">
-        <div class="container-fluid py-2">
-            <h1 class="display-2 mb-4 text-center">Hello World!</h1>
-        </div>
-        
-        <p class="text-center fs-4 fst-italic serif">How I set up this beautiful website with Org-mode</p>
-        
-        <div class="text-center pt-4">
-            
-        </div>
-    </div>
-    <div class="row justify-content-center mb-5">
-        <div class="col-12">
-            <p class="card-date m-0">
-                
-                
-                    Created Mar 12, 2023 - 
-                
-                Last updated: Mar 12, 2023
-            </p>
-            <hr class="dropdown-divider">
-            <div class="row justify-content-between">
-                <div class="col-sm-4">
-                    
-    
-    <span class="status">Growing 🌿</span>
-    
-
-                </div>
-                <div class="col-sm-8" style="text-align: right;">
-                    
-                
-                    
-                    <span class="badge tag-badge">org-mode</span>
-                    
-                    <span class="badge tag-badge">emacs</span>
-                    
-                    <span class="badge tag-badge">hugo</span>
-                    
-                    <span class="badge tag-badge">github</span>
-                    
-                    <span class="badge tag-badge">linux</span>
-                    
-                    <span class="badge tag-badge">digital garden</span>
-                    
-                
-                
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container-fluid py-2">
-        <div class="serif main-content">
-            <p>This is my first ever post in this personal website.</p>
-<p>At the start of this website development, I use <a href="https://github.com/paulmartins/hugo-digital-garden-theme">Digital Garden</a> theme. So in this post I&rsquo;ll explain how I set up this whole website using Hugo, Org-Mode, and Github Pages.</p>
-<h2 id="setting-up-hugo">Setting up Hugo</h2>
-<p>Install <code>hugo</code> in your system with your own package manager</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>doas pacman -S hugo
-</span></span></code></pre></div><p>After <code>hugo</code> finished installed you could start to decide on where you want to put your website directory. In my case, I want it to reside with other <code>org</code> files in the <code>org-directory</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p ~/org/website
-</span></span><span style="display:flex;"><span><span style="color:#111">cd</span> ~/org/website
-</span></span><span style="display:flex;"><span>hugo new site mein-site
-</span></span></code></pre></div><p><code>hugo</code> will automatically create everything that is needed by your pages. I will explain on what do the files and folders that are generated by <code>hugo</code> did.</p>
-<h3 id="set-up-public-folder">Set up <code>public</code> folder</h3>
-<p>Since we are going to use <code>github-pages</code> to host our website. We need to set up <code>public</code> folder, which is the folder where <code>hugo</code> build our website, to push to our <code>&lt;YOUR_GITHUB_USERNAME&gt;.github.io</code> repo. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>Create new repository in your github account. Make sure it is exactly named as <code>&lt;YOUR_GITHUB_USERNAME&gt;.github.io</code>. You could create it through github website, but here is the code if you use <code>github-cli</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gh repo create &lt;YOUR_GITHUB_USERNAME&gt;.github.io --public
-</span></span><span style="display:flex;"><span>git submodule add https://github.com/&lt;YOUR_GITHUB_USERNAME&gt;/&lt;YOUR_GITHUB_USERNAME&gt;.github.io.git public/
-</span></span></code></pre></div><p>The 2<sup>nd</sup> line of let you to manage the <code>public</code> folder as a separate submodule.</p>
-<h3 id="add-theme">Add theme</h3>
-<p>Now it is time to install the <a href="https://github.com/paulmartins/hugo-digital-garden-theme">Digital Garden</a> theme. I personally prefer to manage it using <code>git submodule</code>. Although 99% percent of my <code>git</code> stuffs I did within <a href="https://magit.vc/">Magit</a>. Here are the <code>git</code> command for you non-emacs guys.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/paulmartins/hugo-digital-garden-theme.git themes/hugo-digital-garden-theme
-</span></span></code></pre></div><p>Now let <code>hugo</code> know the theme that you just downloaded, by setting it up in <code>config.toml</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75af00">theme</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;hugo-digital-garden-theme&#34;</span>
-</span></span></code></pre></div><p>Hmm.. while we are here let&rsquo;s just revamp the <code>config.toml</code> to satisfy this theme. Here is what it looks like in the end: (I basically take the one from <code>themes/hugo-digital-garden-theme/exampleSite</code>)</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#75af00">baseURL</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;https://&lt;YOUR_GITHUB_USERNAME&gt;.github.io/&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">languageCode</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;en-us&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">title</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Hi there! I&#39;m &lt;YOUR_NAME&gt;.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">theme</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;hugo-digital-garden-theme&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">copyright</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;&lt;YOUR_NAME&gt; ©&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75af00">canonifyURLs</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#75af00">params</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;&lt;YOUR_NAME&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">description</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;&lt;DESCRIPTION_ABOUT_YOU&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">initials</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;&lt;YN&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">googleAnalytics</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">params</span><span style="color:#111">.</span><span style="color:#75af00">social</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Twitter&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">link</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;https://twitter.com/&lt;YOUR_TWITTER&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">icon</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;fab fa-twitter&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">params</span><span style="color:#111">.</span><span style="color:#75af00">social</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Github&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">link</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;https://github.com/&lt;YOUR_GITHUB_USERNAME&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">icon</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;fab fa-github&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   <span style="color:#111">[[</span><span style="color:#75af00">params</span><span style="color:#111">.</span><span style="color:#75af00">social</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Medium&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75af00">link</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;https://medium.com/@&lt;YOUR_MEDIUM_PROFILE&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75af00">icon</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;fab fa-medium-m&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">params</span><span style="color:#111">.</span><span style="color:#75af00">social</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;LinkedIn&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">link</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;https://linkedin.com/in/&lt;YOUR_LINKEDIN_PROFILE&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">icon</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;fab fa-linkedin-in&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#75af00">menu</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">menu</span><span style="color:#111">.</span><span style="color:#75af00">main</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Digital Garden&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">url</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;/garden/&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">weight</span> <span style="color:#111">=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">menu</span><span style="color:#111">.</span><span style="color:#75af00">main</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Projects&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">url</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;/projects/&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">weight</span> <span style="color:#111">=</span> <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">menu</span><span style="color:#111">.</span><span style="color:#75af00">main</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;Literatures&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">url</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;/literature/&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">weight</span> <span style="color:#111">=</span> <span style="color:#ae81ff">3</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[[</span><span style="color:#75af00">menu</span><span style="color:#111">.</span><span style="color:#75af00">main</span><span style="color:#111">]]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">name</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;About&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">url</span> <span style="color:#111">=</span> <span style="color:#d88200">&#34;/about/&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">weight</span> <span style="color:#111">=</span> <span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#75af00">taxonomies</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">garden_tags</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;garden_tags&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">project_tags</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;project_tags&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">library_tags</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;library_tags&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">[</span><span style="color:#75af00">markup</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75af00">defaultMarkdownHandler</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;goldmark&#39;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[</span><span style="color:#75af00">markup</span><span style="color:#111">.</span><span style="color:#75af00">goldmark</span><span style="color:#111">.</span><span style="color:#75af00">renderer</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">unsafe</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[</span><span style="color:#75af00">markup</span><span style="color:#111">.</span><span style="color:#75af00">goldmark</span><span style="color:#111">.</span><span style="color:#75af00">extensions</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">definitionList</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">footnote</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">linkify</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">strikethrough</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">table</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">taskList</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">typographer</span> <span style="color:#111">=</span> <span style="color:#00a8c8">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#111">[</span><span style="color:#75af00">markup</span><span style="color:#111">.</span><span style="color:#75af00">highlight</span><span style="color:#111">]</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Choose from https://xyproto.github.io/splash/docs/all.html</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75af00">style</span> <span style="color:#111">=</span> <span style="color:#d88200">&#39;monokailight&#39;</span>
-</span></span></code></pre></div><h2 id="ox-hugo-set-up"><code>ox-hugo</code> set up</h2>
-<p>Everything before this is generic for <code>hugo</code> website set up. Now here are the magic of org-mode comes in. <code>ox-hugo</code> by design favors more single-file management for the whole <code>hugo</code> website<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. While I personally prefer to manage each page with each different file. To make that workflow much smoother and to cleanup our org-file <code>front-matter</code> we are going to use <code>.dir-locals.el</code> file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span><span style="color:#75715e">;;; $HUGO_BASE_DIR/.dir-locals.el -*- lexical-binding: t; -*-</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#111">((</span><span style="color:#d88200">&#34;.dir-locals.el&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">lisp-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#111">parinfer-rust-mode</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#d88200">&#34;content-org/&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">org-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#111">org-hugo-auto-export-mode</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-base-dir</span> <span style="color:#d88200">&#34;~/org/website/mein-site&#34;</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-front-matter-format</span> <span style="color:#d88200">&#34;yaml&#34;</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#d88200">&#34;content-org/about&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">org-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-section</span> <span style="color:#d88200">&#34;about&#34;</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#d88200">&#34;content-org/garden&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">org-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-section</span> <span style="color:#d88200">&#34;garden&#34;</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-auto-set-lastmod</span> <span style="color:#00a8c8">t</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#d88200">&#34;content-org/literature&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">org-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-section</span> <span style="color:#d88200">&#34;literature&#34;</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-auto-set-lastmod</span> <span style="color:#00a8c8">t</span><span style="color:#111">))))))</span>
-</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#d88200">&#34;content-org/projects&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#111">org-mode</span> <span style="color:#f92672">.</span> <span style="color:#111">((</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-section</span> <span style="color:#d88200">&#34;projects&#34;</span><span style="color:#111">))</span>
-</span></span><span style="display:flex;"><span>                  <span style="color:#111">(</span><span style="color:#75af00">eval</span> <span style="color:#f92672">.</span> <span style="color:#111">(</span><span style="color:#00a8c8">setq</span> <span style="color:#111">org-hugo-auto-set-lastmod</span> <span style="color:#00a8c8">t</span><span style="color:#111">)))))))</span>
-</span></span></code></pre></div><p>Here are what the code does:</p>
-<ol>
-<li>Make sure <code>parinfer-rust-mode</code> enabled when opening or editing <code>.dir-locals.el</code> (because <code>lisp</code>)</li>
-<li>When opening any org-files within <code>content-org/</code> directory:
-<ol>
-<li>Enable <code>org-hugo-auto-export-mode</code><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></li>
-<li>Set <code>org-hugo-base-dir</code> (set this to where you place your <code>hugo</code> website)</li>
-<li>Set <code>org-hugo-front-matter-format</code> to <code>yaml</code> (default is <code>toml</code>)</li>
-</ol>
-</li>
-<li>When opening the respective <code>content-org/</code> subdirectories:
-<ol>
-<li>Set <code>org-hugo-section</code> to the respective sections</li>
-<li>For <a href="https://rezaamashi.github.io/garden/">garden</a>, <a href="https://rezaamashi.github.io/literature/">literature</a>, and <a href="https://rezaamashi.github.io/projects/">projects</a>, enable <code>org-hugo-auto-set-lastmod</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="github-set-up">Github set up</h2>
-<p>Currently I manually build my <code>hugo</code> website in my system using</p>
-<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
-</span></span></code></pre></div><p>In <code>$HUGO_BASE_DIRECTORY</code>. It will build every page with <code>draft: false</code>  to <code>public</code> folder. Then I will commit it to remote where it is automatically published. But I want to set the built process to use <code>github-workflow</code>. So a single commit to the personal repo and the website is ready.</p>
-<h2 id="workflow-example">Workflow example</h2>
-<ol>
-<li>Run <code>hugo server --buildDrafts</code> for live editing environment</li>
-<li>Open <code>localhost:1313</code> in your browser</li>
-<li>Open an Emacs instance</li>
-<li>Create a new org-file in <code>garden/</code> directory</li>
-<li>Give it <code>#+title: &lt;TITLE_THAT_YOU_MAKE&gt;</code></li>
-<li>And start writing away and you will see the your page changing as you save your file</li>
-<li>When you finished writing and ready to publish, add <code>#+hugo_draft: false</code> to your front-matter</li>
-<li>Kill <code>hugo server</code> instance that you run</li>
-<li>Run <code>hugo</code> to build your website</li>
-<li>Commit the changes on <code>public/</code> directory, and viola. Your website is ready at <code>&lt;YOUR_GITHUB_USERNAME&gt;.github.io</code></li>
-</ol>
-<h2 id="verdict">Verdict</h2>
-<p><code>hugo</code> is actually a fun way to set up a static website. It is fast and lightweight. Github-page also provide a free and easy to set up service for developing webste. While <code>ox-hugo</code> provide a lot of integration with org-mode there are still edge case where it needs to be revamped, especially for my kind of workflow.</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1">
-<p>So if you want to also track your whole <code>hugo</code> website project, you can set up different personal repo. Where you can set up and try out everything away from the public eye.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2">
-<p>And we all know the pain of opening, accessing and modifying a huge org-file&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>Taken from <code>ox-hugo</code> <a href="https://ox-hugo.scripter.co/doc/auto-export-on-saving/">Documentation</a>, for smoother workflow.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</div>
-
-        </div>
-    </div>
-            <hr class="dropdown-divider">
-            <div id="disqus_thread"></div>
-<script type="application/javascript">
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "rezaamashi" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-
-
-        </div><div class="container">
-    <div class="row justify-content-between">
-        <div class="col-sm-4">
-            <p class="footer">Reza Amashi © 2023 </p>
-        </div>
-        <div class="col-sm-6 d-flex flex-row-reverse">
-            
-            <a class="footer-social px-2"  href="https://rezaamashi.github.io/index.xml" target="_blank"><i class="fa fa-rss"></i></a>
-            
-            <a class="footer-social px-2"  href="https://twitter.com/mnurreza" target="_blank"><i class="fab fa-twitter"></i></a>
-            
-            <a class="footer-social px-2"  href="https://instagram.com/amasyi.reza" target="_blank"><i class="fab fa-instagram"></i></a>
-            
-            <a class="footer-social px-2"  href="https://github.com/rezaamashi" target="_blank"><i class="fab fa-github"></i></a>
-            
-            <a class="footer-social px-2"  href="https://linkedin.com/in/reza-amasyi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            
-        </div>
-    </div>
-</div>
-<script src="https://rezaamashi.github.io/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://rezaamashi.github.io/js/jquery.min.js"></script>
-<script src="https://rezaamashi.github.io/js/isotope.pkgd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-<script src="https://rezaamashi.github.io/js/dark.js"></script>
-<script src="https://rezaamashi.github.io/js/isotope.js"></script>
-<script src="https://rezaamashi.github.io/js/mermaid.min.js"></script>
-<script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script></body>
-</html>
+<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRSJECV048"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRSJECV048")</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@200;300;400;500;600&family=Encode+Sans+Semi+Condensed:wght@400&display=swap" rel=stylesheet><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/bootstrap.min.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/all.min.css><link disabled id=dark-mode-theme rel=stylesheet href=https://rezaamashi.github.io/css/dark.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/style.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/my_style.css><title>Reza Amashi | Hello World!</title><meta name=description content="How I set up this beautiful website with Org-mode and Hugo"></head><body><nav class="navbar navbar-expand-lg navbar-light bg-light"><div class=container><a class=navbar-brand href=https://rezaamashi.github.io/><b style=font-weight:800>RA</b></a>
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNavDropdown aria-controls=navbarNavDropdown aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarNavDropdown><ul class="navbar-nav ms-auto mt-2 mt-lg-0"><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/garden/>Digital Garden</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/projects/>Projects</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/library/>Library</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/about/>About</a></li><li class="nav-item px-2 pt-1"><a class="btn fas fa-moon" id=dark-mode-toggle></a></li></ul></div></div></nav><div id=content><div class=container style=max-width:800px><div class="py-4 rounded-3"><div class="container-fluid py-2"><h1 class="display-2 mb-4 text-center">Hello World!</h1></div><p class="text-center fs-4 fst-italic serif">How I set up this beautiful website with Org-mode and Hugo</p><div class="text-center pt-4"></div></div><div class="row justify-content-center mb-5"><div class=col-12><p class="card-date m-0">Created Mar 12, 2023 -
+Last updated: Jul 3, 2023</p><hr class=dropdown-divider><div class="row justify-content-between"><div class=col-sm-4><span class=status>Growing 🌿</span></div><div class=col-sm-8 style=text-align:right><span class="badge tag-badge">org-mode</span>
+<span class="badge tag-badge">emacs</span>
+<span class="badge tag-badge">hugo</span>
+<span class="badge tag-badge">github</span>
+<span class="badge tag-badge">linux</span>
+<span class="badge tag-badge">digital garden</span></div></div></div></div><div class="container-fluid py-2"><div class="serif main-content"><p>This is my first ever post in this personal website.</p><p>At the start of this website development, I use <a href=https://github.com/paulmartins/hugo-digital-garden-theme>Digital Garden</a> theme. So in this post I&rsquo;ll explain how I set up this whole website using Hugo, Org-Mode, and Github Pages.</p><h2 id=setting-up-hugo>Setting up Hugo</h2><p>Install <code>hugo</code> in your system with your own package manager</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>doas pacman -S hugo
+</span></span></code></pre></div><p>After <code>hugo</code> finished installed you could start to decide on where you want to put your website directory. In my case, I want it to reside with other <code>org</code> files in the <code>org-directory</code>.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>mkdir -p ~/org/website
+</span></span><span style=display:flex><span><span style=color:#111>cd</span> ~/org/website
+</span></span><span style=display:flex><span>hugo new site mein-site
+</span></span></code></pre></div><p><code>hugo</code> will automatically create everything that is needed by your pages. I will explain on what do the files and folders that are generated by <code>hugo</code> did.</p><h3 id=set-up-public-folder>Set up <code>public</code> folder</h3><p>Since we are going to use <code>github-pages</code> to host our website. We need to set up <code>public</code> folder, which is the folder where <code>hugo</code> build our website, to push to our <code>&lt;YOUR_GITHUB_USERNAME>.github.io</code> repo. <sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p><p>Create new repository in your github account. Make sure it is exactly named as <code>&lt;YOUR_GITHUB_USERNAME>.github.io</code>. You could create it through github website, but here is the code if you use <code>github-cli</code></p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>gh repo create &lt;YOUR_GITHUB_USERNAME&gt;.github.io --public
+</span></span><span style=display:flex><span>git submodule add https://github.com/&lt;YOUR_GITHUB_USERNAME&gt;/&lt;YOUR_GITHUB_USERNAME&gt;.github.io.git public/
+</span></span></code></pre></div><p>The 2<sup>nd</sup> line of let you to manage the <code>public</code> folder as a separate submodule.</p><h3 id=add-theme>Add theme</h3><p>Now it is time to install the <a href=https://github.com/paulmartins/hugo-digital-garden-theme>Digital Garden</a> theme. I personally prefer to manage it using <code>git submodule</code>. Although 99% percent of my <code>git</code> stuffs I did within <a href=https://magit.vc/>Magit</a>. Here are the <code>git</code> command for you non-emacs guys.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>git submodule add https://github.com/paulmartins/hugo-digital-garden-theme.git themes/hugo-digital-garden-theme
+</span></span></code></pre></div><p>Now let <code>hugo</code> know the theme that you just downloaded, by setting it up in <code>config.toml</code></p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span><span style=color:#75af00>theme</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;hugo-digital-garden-theme&#34;</span>
+</span></span></code></pre></div><p>Hmm.. while we are here let&rsquo;s just revamp the <code>config.toml</code> to satisfy this theme. Here is what it looks like in the end: (I basically take the one from <code>themes/hugo-digital-garden-theme/exampleSite</code>)</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span><span style=color:#75af00>baseURL</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;https://&lt;YOUR_GITHUB_USERNAME&gt;.github.io/&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75af00>languageCode</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;en-us&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#75af00>title</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Hi there! I&#39;m &lt;YOUR_NAME&gt;.&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75af00>theme</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;hugo-digital-garden-theme&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75af00>copyright</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;&lt;YOUR_NAME&gt; ©&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#75af00>canonifyURLs</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#111>[</span><span style=color:#75af00>params</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;&lt;YOUR_NAME&gt;&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>description</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;&lt;DESCRIPTION_ABOUT_YOU&gt;&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>initials</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;&lt;YN&gt;&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>googleAnalytics</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>params</span><span style=color:#111>.</span><span style=color:#75af00>social</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Twitter&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>link</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;https://twitter.com/&lt;YOUR_TWITTER&gt;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>icon</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;fab fa-twitter&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>params</span><span style=color:#111>.</span><span style=color:#75af00>social</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Github&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>link</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;https://github.com/&lt;YOUR_GITHUB_USERNAME&gt;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>icon</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;fab fa-github&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>   <span style=color:#111>[[</span><span style=color:#75af00>params</span><span style=color:#111>.</span><span style=color:#75af00>social</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>     <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Medium&#34;</span>
+</span></span><span style=display:flex><span>     <span style=color:#75af00>link</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;https://medium.com/@&lt;YOUR_MEDIUM_PROFILE&gt;&#34;</span>
+</span></span><span style=display:flex><span>     <span style=color:#75af00>icon</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;fab fa-medium-m&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>params</span><span style=color:#111>.</span><span style=color:#75af00>social</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;LinkedIn&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>link</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;https://linkedin.com/in/&lt;YOUR_LINKEDIN_PROFILE&gt;&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>icon</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;fab fa-linkedin-in&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#111>[</span><span style=color:#75af00>menu</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>menu</span><span style=color:#111>.</span><span style=color:#75af00>main</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Digital Garden&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>url</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;/garden/&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>weight</span> <span style=color:#111>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>menu</span><span style=color:#111>.</span><span style=color:#75af00>main</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Projects&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>url</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;/projects/&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>weight</span> <span style=color:#111>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>menu</span><span style=color:#111>.</span><span style=color:#75af00>main</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;Literatures&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>url</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;/literature/&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>weight</span> <span style=color:#111>=</span> <span style=color:#ae81ff>3</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[[</span><span style=color:#75af00>menu</span><span style=color:#111>.</span><span style=color:#75af00>main</span><span style=color:#111>]]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>name</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;About&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>url</span> <span style=color:#111>=</span> <span style=color:#d88200>&#34;/about/&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>weight</span> <span style=color:#111>=</span> <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#111>[</span><span style=color:#75af00>taxonomies</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>garden_tags</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;garden_tags&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>project_tags</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;project_tags&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>library_tags</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;library_tags&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#111>[</span><span style=color:#75af00>markup</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>  <span style=color:#75af00>defaultMarkdownHandler</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;goldmark&#39;</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[</span><span style=color:#75af00>markup</span><span style=color:#111>.</span><span style=color:#75af00>goldmark</span><span style=color:#111>.</span><span style=color:#75af00>renderer</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>unsafe</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[</span><span style=color:#75af00>markup</span><span style=color:#111>.</span><span style=color:#75af00>goldmark</span><span style=color:#111>.</span><span style=color:#75af00>extensions</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>definitionList</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>footnote</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>linkify</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>strikethrough</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>table</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>taskList</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>typographer</span> <span style=color:#111>=</span> <span style=color:#00a8c8>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#111>[</span><span style=color:#75af00>markup</span><span style=color:#111>.</span><span style=color:#75af00>highlight</span><span style=color:#111>]</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Choose from https://xyproto.github.io/splash/docs/all.html</span>
+</span></span><span style=display:flex><span>    <span style=color:#75af00>style</span> <span style=color:#111>=</span> <span style=color:#d88200>&#39;monokailight&#39;</span>
+</span></span></code></pre></div><h2 id=ox-hugo-set-up><code>ox-hugo</code> set up</h2><p>Everything before this is generic for <code>hugo</code> website set up. Now here are the magic of org-mode comes in. <code>ox-hugo</code> by design favors more single-file management for the whole <code>hugo</code> website<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>. While I personally prefer to manage each page with each different file. To make that workflow much smoother and to cleanup our org-file <code>front-matter</code> we are going to use <code>.dir-locals.el</code> file.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-lisp data-lang=lisp><span style=display:flex><span><span style=color:#75715e>;;; $HUGO_BASE_DIR/.dir-locals.el -*- lexical-binding: t; -*-</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#111>((</span><span style=color:#d88200>&#34;.dir-locals.el&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>lisp-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#111>parinfer-rust-mode</span><span style=color:#111>))))))</span>
+</span></span><span style=display:flex><span> <span style=color:#111>(</span><span style=color:#d88200>&#34;content-org/&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>org-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#111>org-hugo-auto-export-mode</span><span style=color:#111>))</span>
+</span></span><span style=display:flex><span>                  <span style=color:#111>(</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-base-dir</span> <span style=color:#d88200>&#34;~/org/website/mein-site&#34;</span><span style=color:#111>))</span>
+</span></span><span style=display:flex><span>                  <span style=color:#111>(</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-front-matter-format</span> <span style=color:#d88200>&#34;yaml&#34;</span><span style=color:#111>))))))</span>
+</span></span><span style=display:flex><span> <span style=color:#111>(</span><span style=color:#d88200>&#34;content-org/about&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>org-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-section</span> <span style=color:#d88200>&#34;about&#34;</span><span style=color:#111>))))))</span>
+</span></span><span style=display:flex><span> <span style=color:#111>(</span><span style=color:#d88200>&#34;content-org/garden&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>org-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-section</span> <span style=color:#d88200>&#34;garden&#34;</span><span style=color:#111>))</span>
+</span></span><span style=display:flex><span>                  <span style=color:#111>(</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-auto-set-lastmod</span> <span style=color:#00a8c8>t</span><span style=color:#111>))))))</span>
+</span></span><span style=display:flex><span> <span style=color:#111>(</span><span style=color:#d88200>&#34;content-org/literature&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>org-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-section</span> <span style=color:#d88200>&#34;literature&#34;</span><span style=color:#111>))</span>
+</span></span><span style=display:flex><span>                  <span style=color:#111>(</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-auto-set-lastmod</span> <span style=color:#00a8c8>t</span><span style=color:#111>))))))</span>
+</span></span><span style=display:flex><span> <span style=color:#111>(</span><span style=color:#d88200>&#34;content-org/projects&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#111>org-mode</span> <span style=color:#f92672>.</span> <span style=color:#111>((</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-section</span> <span style=color:#d88200>&#34;projects&#34;</span><span style=color:#111>))</span>
+</span></span><span style=display:flex><span>                  <span style=color:#111>(</span><span style=color:#75af00>eval</span> <span style=color:#f92672>.</span> <span style=color:#111>(</span><span style=color:#00a8c8>setq</span> <span style=color:#111>org-hugo-auto-set-lastmod</span> <span style=color:#00a8c8>t</span><span style=color:#111>)))))))</span>
+</span></span></code></pre></div><p>Here are what the code does:</p><ol><li>Make sure <code>parinfer-rust-mode</code> enabled when opening or editing <code>.dir-locals.el</code> (because <code>lisp</code>)</li><li>When opening any org-files within <code>content-org/</code> directory:<ol><li>Enable <code>org-hugo-auto-export-mode</code><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup></li><li>Set <code>org-hugo-base-dir</code> (set this to where you place your <code>hugo</code> website)</li><li>Set <code>org-hugo-front-matter-format</code> to <code>yaml</code> (default is <code>toml</code>)</li></ol></li><li>When opening the respective <code>content-org/</code> subdirectories:<ol><li>Set <code>org-hugo-section</code> to the respective sections</li><li>For <a href=https://rezaamashi.github.io/garden/>garden</a>, <a href=https://rezaamashi.github.io/literature/>literature</a>, and <a href=https://rezaamashi.github.io/projects/>projects</a>, enable <code>org-hugo-auto-set-lastmod</code></li></ol></li></ol><h2 id=github-set-up>Github set up</h2><p>Currently I manually build my <code>hugo</code> website in my system using</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>hugo
+</span></span></code></pre></div><p>In <code>$HUGO_BASE_DIRECTORY</code>. It will build every page with <code>draft: false</code> to <code>public</code> folder. Then I will commit it to remote where it is automatically published. But I want to set the built process to use <code>github-workflow</code>. So a single commit to the personal repo and the website is ready.</p><h2 id=workflow-example>Workflow example</h2><ol><li>Run <code>hugo server --buildDrafts</code> for live editing environment</li><li>Open <code>localhost:1313</code> in your browser</li><li>Open an Emacs instance</li><li>Create a new org-file in <code>garden/</code> directory</li><li>Give it <code>#+title: &lt;TITLE_THAT_YOU_MAKE></code></li><li>And start writing away and you will see the your page changing as you save your file</li><li>When you finished writing and ready to publish, add <code>#+hugo_draft: false</code> to your front-matter</li><li>Kill <code>hugo server</code> instance that you run</li><li>Run <code>hugo</code> to build your website</li><li>Commit the changes on <code>public/</code> directory, and viola. Your website is ready at <code>&lt;YOUR_GITHUB_USERNAME>.github.io</code></li></ol><h2 id=verdict>Verdict</h2><p><code>hugo</code> is actually a fun way to set up a static website. It is fast and lightweight. Github-page also provide a free and easy to set up service for developing webste. While <code>ox-hugo</code> provide a lot of integration with org-mode there are still edge case where it needs to be revamped, especially for my kind of workflow.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>So if you want to also track your whole <code>hugo</code> website project, you can set up different personal repo. Where you can set up and try out everything away from the public eye.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>And we all know the pain of opening, accessing and modifying a huge org-file&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>Taken from <code>ox-hugo</code> <a href=https://ox-hugo.scripter.co/doc/auto-export-on-saving/>Documentation</a>, for smoother workflow.&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div></div><hr class=dropdown-divider><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//rezaamashi.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=container><div class="row justify-content-between"><div class=col-sm-4><p class=footer>Reza Amashi © 2023</p></div><div class="col-sm-6 d-flex flex-row-reverse"><a class="footer-social px-2" href=https://rezaamashi.github.io/index.xml target=_blank><i class="fa fa-rss"></i></a>
+<a class="footer-social px-2" href=https://twitter.com/mnurreza target=_blank><i class="fab fa-twitter"></i></a>
+<a class="footer-social px-2" href=https://instagram.com/amasyi.reza target=_blank><i class="fab fa-instagram"></i></a>
+<a class="footer-social px-2" href=https://github.com/rezaamashi target=_blank><i class="fab fa-github"></i></a>
+<a class="footer-social px-2" href=https://linkedin.com/in/reza-amasyi target=_blank><i class="fab fa-linkedin-in"></i></a></div></div></div><script src=https://rezaamashi.github.io/js/bootstrap.min.js></script>
+<script type=text/javascript src=https://rezaamashi.github.io/js/jquery.min.js></script>
+<script src=https://rezaamashi.github.io/js/isotope.pkgd.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js integrity=sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D crossorigin=anonymous async></script>
+<script src=https://rezaamashi.github.io/js/dark.js></script>
+<script src=https://rezaamashi.github.io/js/isotope.js></script>
+<script src=https://rezaamashi.github.io/js/mermaid.min.js></script>
+<script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script></body></html>
