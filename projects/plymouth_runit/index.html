@@ -1,52 +1,242 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRSJECV048"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRSJECV048")</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=Frank+Ruhl+Libre:wght@200;300;400;500;600&family=Encode+Sans+Semi+Condensed:wght@400&display=swap" rel=stylesheet><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/bootstrap.min.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/all.min.css><link disabled id=dark-mode-theme rel=stylesheet href=https://rezaamashi.github.io/css/dark.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/style.css><link rel=stylesheet type=text/css href=https://rezaamashi.github.io/css/my_style.css><title>Reza Amashi | Setting up Plymouth in Runit</title><meta name=description content="How to set up Plymouth on Artix-Runit"></head><body><nav class="navbar navbar-expand-lg navbar-light bg-light"><div class=container><a class=navbar-brand href=https://rezaamashi.github.io/><b style=font-weight:800>RA</b></a>
-<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNavDropdown aria-controls=navbarNavDropdown aria-expanded=false aria-label="Toggle navigation">
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarNavDropdown><ul class="navbar-nav ms-auto mt-2 mt-lg-0"><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/garden/>Digital Garden</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/projects/>Projects</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/library/>Library</a></li><li class=nav-item><a class=nav-link href=https://rezaamashi.github.io/about/>About</a></li><li class="nav-item px-2 pt-1"><a class="btn fas fa-moon" id=dark-mode-toggle></a></li></ul></div></div></nav><div id=content><div class=container style=max-width:800px><div class="py-4 rounded-3"><div class="container-fluid py-2"><h1 class="display-2 mb-4 text-center">Setting up Plymouth in Runit</h1></div><p class="text-center fs-4 fst-italic serif">How to set up Plymouth on Artix-Runit</p><div class="text-center pt-4"></div></div><div class="row justify-content-center mb-5"><div class=col-12><p class="card-date m-0">Created Mar 12, 2023 -
-Last updated: Mar 12, 2023</p><hr class=dropdown-divider><div class="row justify-content-between"><div class=col-sm-4></div><div class=col-sm-8 style=text-align:right><span class="badge tag-badge">linux</span>
-<span class="badge tag-badge">linux ricing series</span></div></div></div></div><div class="container-fluid py-2"><div class="serif main-content"><p>I have been scratching my head on how to set up <code>plymouth</code> in my Artix-Runit system. Going around the web I couldn&rsquo;t find a proper tutorial or documentation on how to do this. It is basically scrambled around different reddit posts and even official artix forums doesn&rsquo;t have the discussion regarding this. So I decided to spit my journey into this page.</p><blockquote><p>If you are already quite versed with configuring <code>plymouth</code> and just looking for what&rsquo;s different in setting it up in runit, Jump <a href=#kill-plymouth-once-display-manager-run>right here</a></p></blockquote><h2 id=what-is-plymouth>What is <code>plymouth</code></h2><p><code>plymouth</code> is a boot animation interface for linux, where you can set up custom animation to be played when you start up your linux system. By default it requires <code>systemd</code> as a dependency and for it to be set up. So <code>runit</code> support is still quite rare.</p><h2 id=how-to-set-up-plymouth-in-artix-runit-system>How to set up <code>plymouth</code> in Artix-Runit system</h2><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>DISCLAIMER:
-</span></span><span style=display:flex><span>For now I could only configure for ~plymouth~ to run on startup only,
-</span></span><span style=display:flex><span>So no method for shut down yet.
-</span></span></code></pre></div><h3 id=install-plymouth-nosystemd-from-aur>Install <code>plymouth-nosystemd</code> from <code>AUR</code></h3><p>Make sure you have an AUR client installed, in my case I have <code>paru</code><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>.</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>paru -S plymouth-nosystemd
-</span></span></code></pre></div><p>You could also install some themes either manually or let <code>pacman</code> manage your <code>plymouth</code> theme. Right now, I just want to use some themes that are created by <a href=https://github.com/adi1090x/plymouth-themes>adi1090x</a>. Thankfully it is available in AUR. So we can simply install it with <code>paru</code>. I kinda like the <code>hexagon-dots-alt</code> theme, to install it we could just use:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>paru -S plymouth-theme-hexagon-dots-alt-git
-</span></span></code></pre></div><h3 id=set-up-mkinitcpio-dot-conf>Set up <code>mkinitcpio.conf</code></h3><p>In Artix-Runit system, <code>plymouth</code> is being set up to run by the <code>initramfs</code> during boot up<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>. It is being run after <code>udev</code>. So to enable <code>plymouth</code> you need to modify <code>/etc/mkinitcpio.conf</code>:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cfg data-lang=cfg><span style=display:flex><span><span style=color:#75715e># From</span>
-</span></span><span style=display:flex><span><span style=color:#75af00>HOOKS</span><span style=color:#f92672>=</span><span style=color:#d88200>(base udev autodetect modconf kms keyboard keymap consolefont block resume filesystems fsck)</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># To</span>
-</span></span><span style=display:flex><span><span style=color:#75af00>HOOKS</span><span style=color:#f92672>=</span><span style=color:#d88200>(base udev plymouth autodetect modconf kms keyboard keymap consolefont block resume filesystems fsck)</span>
-</span></span></code></pre></div><p>Make sure to place it after <code>udev</code>. YMMV, other hooks doesn&rsquo;t quite matter as it is dependent on your system.</p><h4 id=build-initcpio>Build <code>initcpio</code></h4><p>You could build <code>initcpio</code> with <code>mkinitcpio</code></p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>mkinitcpio -p &lt;YOUR_LINUX_KERNEL&gt;
-</span></span></code></pre></div><p>or build it with <code>plymouth</code> as it applies your selected theme</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>doas plymouth-set-default-theme -R hexagon-dots-alt
-</span></span></code></pre></div><h3 id=set-up-bootloader>Set up bootloader</h3><p>In my system I use <code>grub</code> for my bootloader. To make <code>plymouth</code> to work with <code>grub</code> you need to modify <code>/etc/default/grub</code>:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-cfg data-lang=cfg><span style=display:flex><span><span style=color:#75715e># From</span>
-</span></span><span style=display:flex><span><span style=color:#75af00>GRUB_CMDLINE_LINUX_DEFAULT</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;resume=UUID=&lt;UUID&gt; resume_offset=&lt;OFFSET&gt; loglevel=3 quiet&#34;</span>
-</span></span><span style=display:flex><span><span style=color:#75715e># To</span>
-</span></span><span style=display:flex><span><span style=color:#75af00>GRUB_CMDLINE_LINUX_DEFAULT</span><span style=color:#f92672>=</span><span style=color:#d88200>&#34;resume=UUID=&lt;UUID&gt; resume_offset=&lt;OFFSET&gt; loglevel=3 quiet splash udev.log_level=3 vt.global_cursor_default=0&#34;</span>
-</span></span></code></pre></div><p>Make sure to place <code>splash ...</code> after <code>quiet</code>. YMMV, in my system I have <code>resume</code> enabled. So <code>resume</code> and <code>resume_offset</code> might not be available on your system.</p><h3 id=kill-plymouth-once-display-manager-run>Kill <code>plymouth</code> once display manager run</h3><p>This is the hacky part that was missing on my previous attempts. In <code>systemd</code> distros, Display managers has its own integration with <code>plymouth</code>. <code>plymouth</code> needs to be killed when the Display manager run on boot up, and run again when the system shut down. For start up you just need to add <code>plymouth --quit</code> at the nearest line when your display manager is going to be executed. In my system, I use <code>sddm</code><sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>:</p><div class=highlight><pre tabindex=0 style=color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e>#!/bin/sh
-</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#111>set</span> -e
-</span></span><span style=display:flex><span>sv check dbus &gt;/dev/null <span style=color:#f92672>||</span> <span style=color:#111>exit</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#00a8c8>if</span> <span style=color:#f92672>[</span> -x /usr/bin/elogind-inhibit <span style=color:#f92672>]</span><span style=color:#111>;</span> <span style=color:#00a8c8>then</span>
-</span></span><span style=display:flex><span>        dbus-send --system --print-reply --dest<span style=color:#f92672>=</span>org.freedesktop.DBus <span style=color:#8045ff>\
-</span></span></span><span style=display:flex><span><span style=color:#8045ff></span>                /org/freedesktop/DBus                           <span style=color:#8045ff>\
-</span></span></span><span style=display:flex><span><span style=color:#8045ff></span>                org.freedesktop.DBus.StartServiceByName         <span style=color:#8045ff>\
-</span></span></span><span style=display:flex><span><span style=color:#8045ff></span>                string:org.freedesktop.login1 uint32:0
-</span></span><span style=display:flex><span><span style=color:#00a8c8>fi</span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># ADD THIS LINE HERE !</span>
-</span></span><span style=display:flex><span>plymouth --quit
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#75715e># respect system locale</span>
-</span></span><span style=display:flex><span><span style=color:#f92672>[</span> -r /etc/locale.conf <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> . /etc/locale.conf <span style=color:#f92672>&amp;&amp;</span> <span style=color:#111>export</span> LANG
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#f92672>[</span> -f ./conf <span style=color:#f92672>]</span> <span style=color:#f92672>&amp;&amp;</span> . ./conf
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span><span style=color:#111>exec</span> sddm 2&gt;<span style=color:#111>&amp;</span><span style=color:#ae81ff>1</span>
-</span></span></code></pre></div><p>This will make sure access to <code>sddm</code> when it is being run. Otherwise, you will be stuck in bootloop<sup id=fnref:4><a href=#fn:4 class=footnote-ref role=doc-noteref>4</a></sup>.</p><h2 id=drawbacks>Drawbacks</h2><p>Unfortunately, at the moment I could only find the way to get <code>plymouth</code> to properly work on startup. I am yet to find a way for it to work with shut down. On top of that I find that sometime for <code>plymouth</code> animations to be properly enjoyed I need to make the boot up to be slower. So if you are already cozy with your snappy boot up, then <code>plymouth</code> is not for you</p><h2 id=verdict>Verdict</h2><p><code>plymouth</code> is a another layer of customization that you could get in Linux, but the documentation and support for runit system is still quite lackluster. I hope that this project post could save some headache for someone out there.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>That I built using <code>Ansible</code> set up to make my system reproducible and consistent. I think I could expand on this in later project post.&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>IIRC other distro such as Fedora use <code>dracut</code> instead of <code>initramfs</code>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>This is official <code>sddm-runit</code> service installed from Artix Repo&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:4><p>If that happen to you make sure you have bootable drive ready&#160;<a href=#fnref:4 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></div></div><hr class=dropdown-divider><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//rezaamashi.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></div><div class=container><div class="row justify-content-between"><div class=col-sm-4><p class=footer>Reza Amashi © 2023</p></div><div class="col-sm-6 d-flex flex-row-reverse"><a class="footer-social px-2" href=https://rezaamashi.github.io/index.xml target=_blank><i class="fa fa-rss"></i></a>
-<a class="footer-social px-2" href=https://twitter.com/mnurreza target=_blank><i class="fab fa-twitter"></i></a>
-<a class="footer-social px-2" href=https://instagram.com/amasyi.reza target=_blank><i class="fab fa-instagram"></i></a>
-<a class="footer-social px-2" href=https://github.com/rezaamashi target=_blank><i class="fab fa-github"></i></a>
-<a class="footer-social px-2" href=https://linkedin.com/in/reza-amasyi target=_blank><i class="fab fa-linkedin-in"></i></a></div></div></div><script src=https://rezaamashi.github.io/js/bootstrap.min.js></script>
-<script type=text/javascript src=https://rezaamashi.github.io/js/jquery.min.js></script>
-<script src=https://rezaamashi.github.io/js/isotope.pkgd.min.js></script>
-<script src=https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js integrity=sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D crossorigin=anonymous async></script>
-<script src=https://rezaamashi.github.io/js/dark.js></script>
-<script src=https://rezaamashi.github.io/js/isotope.js></script>
-<script src=https://rezaamashi.github.io/js/mermaid.min.js></script>
-<script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script></body></html>
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRSJECV048"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WRSJECV048');
+    </script>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link disabled id="dark-mode-theme" rel="stylesheet" href="https://rezaamashi.github.io/css/dark.css">
+    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/my_style.css">
+    
+    
+    
+    <title>Reza Amashi | Setting up Plymouth in Runit</title>
+    <meta name="description" content="How to set up Plymouth on Artix-Runit">
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="https://rezaamashi.github.io/">
+            
+            <b style="font-weight: 800;">RA</b>
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0"><li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/garden/"> Digital Garden</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/projects/"> Projects</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/library/"> Library</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/about/"> About</a>
+                </li>
+             
+            <li class="nav-item px-2 pt-1">
+                <a class="btn fas fa-moon" id="dark-mode-toggle"></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav><div id="content">
+
+<div class="container" style="max-width: 800px;">
+    <div class="py-4 rounded-3">
+        <div class="container-fluid py-2">
+            <h1 class="display-2 mb-4 text-center">Setting up Plymouth in Runit</h1>
+        </div>
+        
+        <p class="text-center fs-4 fst-italic serif">How to set up Plymouth on Artix-Runit</p>
+        
+        <div class="text-center pt-4">
+            
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5">
+        <div class="col-12">
+            <p class="card-date m-0">
+                
+                
+                    Created Mar 12, 2023 - 
+                
+                Last updated: Mar 12, 2023
+            </p>
+            <hr class="dropdown-divider">
+            <div class="row justify-content-between">
+                <div class="col-sm-4">
+                    
+                </div>
+                <div class="col-sm-8" style="text-align: right;">
+                    
+                
+                
+                    
+                    <span class="badge tag-badge">linux</span>
+                    
+                    <span class="badge tag-badge">linux ricing series</span>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid py-2">
+        <div class="serif main-content">
+            <p>I have been scratching my head on how to set up <code>plymouth</code> in my Artix-Runit system. Going around the web I couldn&rsquo;t find a proper tutorial or documentation on how to do this. It is basically scrambled around different reddit posts and even official artix forums doesn&rsquo;t have the discussion regarding this. So I decided to spit my journey into this page.</p>
+<blockquote>
+<p>If you are already quite versed with configuring <code>plymouth</code> and just looking for what&rsquo;s different in setting it up in runit, Jump <a href="#kill-plymouth-once-display-manager-run">right here</a></p>
+</blockquote>
+<h2 id="what-is-plymouth">What is <code>plymouth</code></h2>
+<p><code>plymouth</code> is a boot animation interface for linux, where you can set up custom animation to be played when you start up your linux system. By default it requires <code>systemd</code> as a dependency and for it to be set up. So <code>runit</code> support is still quite rare.</p>
+<h2 id="how-to-set-up-plymouth-in-artix-runit-system">How to set up <code>plymouth</code> in Artix-Runit system</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>DISCLAIMER:
+</span></span><span style="display:flex;"><span>For now I could only configure for ~plymouth~ to run on startup only,
+</span></span><span style="display:flex;"><span>So no method for shut down yet.
+</span></span></code></pre></div><h3 id="install-plymouth-nosystemd-from-aur">Install <code>plymouth-nosystemd</code> from <code>AUR</code></h3>
+<p>Make sure you have an AUR client installed, in my case I have <code>paru</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>paru -S plymouth-nosystemd
+</span></span></code></pre></div><p>You could also install some themes either manually or let <code>pacman</code> manage your <code>plymouth</code> theme. Right now, I just want to use some themes that are created by <a href="https://github.com/adi1090x/plymouth-themes">adi1090x</a>. Thankfully it is available in AUR. So we can simply install it with <code>paru</code>. I kinda like the <code>hexagon-dots-alt</code> theme, to install it we could just use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>paru -S plymouth-theme-hexagon-dots-alt-git
+</span></span></code></pre></div><h3 id="set-up-mkinitcpio-dot-conf">Set up <code>mkinitcpio.conf</code></h3>
+<p>In Artix-Runit system, <code>plymouth</code> is being set up to run by the <code>initramfs</code> during boot up<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. It is being run after <code>udev</code>. So to enable <code>plymouth</code> you need to modify <code>/etc/mkinitcpio.conf</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#75715e"># From</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">HOOKS</span><span style="color:#f92672">=</span><span style="color:#d88200">(base udev autodetect modconf kms keyboard keymap consolefont block resume filesystems fsck)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">HOOKS</span><span style="color:#f92672">=</span><span style="color:#d88200">(base udev plymouth autodetect modconf kms keyboard keymap consolefont block resume filesystems fsck)</span>
+</span></span></code></pre></div><p>Make sure to place it after <code>udev</code>. YMMV, other hooks doesn&rsquo;t quite matter as it is dependent on your system.</p>
+<h4 id="build-initcpio">Build <code>initcpio</code></h4>
+<p>You could build <code>initcpio</code> with <code>mkinitcpio</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkinitcpio -p &lt;YOUR_LINUX_KERNEL&gt;
+</span></span></code></pre></div><p>or build it with <code>plymouth</code> as it applies your selected theme</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>doas plymouth-set-default-theme -R hexagon-dots-alt
+</span></span></code></pre></div><h3 id="set-up-bootloader">Set up bootloader</h3>
+<p>In my system I use <code>grub</code> for my bootloader. To make <code>plymouth</code> to work with <code>grub</code> you need to modify <code>/etc/default/grub</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#75715e"># From</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">GRUB_CMDLINE_LINUX_DEFAULT</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;resume=UUID=&lt;UUID&gt; resume_offset=&lt;OFFSET&gt; loglevel=3 quiet&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To</span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">GRUB_CMDLINE_LINUX_DEFAULT</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;resume=UUID=&lt;UUID&gt; resume_offset=&lt;OFFSET&gt; loglevel=3 quiet splash udev.log_level=3 vt.global_cursor_default=0&#34;</span>
+</span></span></code></pre></div><p>Make sure to place <code>splash ...</code> after <code>quiet</code>. YMMV,  in my system I have <code>resume</code> enabled. So <code>resume</code> and <code>resume_offset</code> might not be available on your system.</p>
+<h3 id="kill-plymouth-once-display-manager-run">Kill <code>plymouth</code> once display manager run</h3>
+<p>This is the hacky part that was missing on my previous attempts. In <code>systemd</code> distros, Display managers has its own integration with <code>plymouth</code>. <code>plymouth</code> needs to be killed when the Display manager run on boot up, and run again when the system shut down. For start up you just need to add <code>plymouth --quit</code> at the nearest line when your display manager is going to be executed. In my system, I use <code>sddm</code><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#111">set</span> -e
+</span></span><span style="display:flex;"><span>sv check dbus &gt;/dev/null <span style="color:#f92672">||</span> <span style="color:#111">exit</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">if</span> <span style="color:#f92672">[</span> -x /usr/bin/elogind-inhibit <span style="color:#f92672">]</span><span style="color:#111">;</span> <span style="color:#00a8c8">then</span>
+</span></span><span style="display:flex;"><span>        dbus-send --system --print-reply --dest<span style="color:#f92672">=</span>org.freedesktop.DBus <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>                /org/freedesktop/DBus                           <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>                org.freedesktop.DBus.StartServiceByName         <span style="color:#8045ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#8045ff"></span>                string:org.freedesktop.login1 uint32:0
+</span></span><span style="display:flex;"><span><span style="color:#00a8c8">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ADD THIS LINE HERE !</span>
+</span></span><span style="display:flex;"><span>plymouth --quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># respect system locale</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> -r /etc/locale.conf <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> . /etc/locale.conf <span style="color:#f92672">&amp;&amp;</span> <span style="color:#111">export</span> LANG
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> -f ./conf <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> . ./conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">exec</span> sddm 2&gt;<span style="color:#111">&amp;</span><span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>This will make sure access to <code>sddm</code> when it is being run. Otherwise, you will be stuck in bootloop<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<h2 id="drawbacks">Drawbacks</h2>
+<p>Unfortunately, at the moment I could only find the way to get <code>plymouth</code> to properly work on startup. I am yet to find a way for it to work with shut down. On top of that I find that sometime for <code>plymouth</code> animations to be properly enjoyed I need to make the boot up to be slower. So if you are already cozy with your snappy boot up, then <code>plymouth</code> is not for you</p>
+<h2 id="verdict">Verdict</h2>
+<p><code>plymouth</code> is a another layer of customization that you could get in Linux, but the documentation and support for runit system is still quite lackluster. I hope that this project post could save some headache for someone out there.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>That I built using <code>Ansible</code> set up to make my system reproducible and consistent. I think I could expand on this in later project post.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>IIRC other distro such as Fedora use <code>dracut</code> instead of <code>initramfs</code>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>This is official <code>sddm-runit</code> service installed from Artix Repo&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>If that happen to you make sure you have bootable drive ready&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+        </div>
+    </div>
+            <hr class="dropdown-divider">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rezaamashi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+
+        </div><div class="container">
+    <div class="row justify-content-between">
+        <div class="col-sm-4">
+            <p class="footer">Reza Amashi © 2023 </p>
+        </div>
+        <div class="col-sm-6 d-flex flex-row-reverse">
+            
+            <a class="footer-social px-2"  href="https://rezaamashi.github.io/index.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            
+            <a class="footer-social px-2"  href="https://twitter.com/mnurreza" target="_blank"><i class="fab fa-twitter"></i></a>
+            
+            <a class="footer-social px-2"  href="https://instagram.com/amasyi.reza" target="_blank"><i class="fab fa-instagram"></i></a>
+            
+            <a class="footer-social px-2"  href="https://github.com/rezaamashi" target="_blank"><i class="fab fa-github"></i></a>
+            
+            <a class="footer-social px-2"  href="https://linkedin.com/in/reza-amasyi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://rezaamashi.github.io/js/dark.js"></script>
+<script src="https://rezaamashi.github.io/js/isotope.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.3/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</body>
+</html>

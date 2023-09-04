@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zettelkasten on Reza Amashi</title>
+    <link>https://rezaamashi.github.io/library_tags/zettelkasten/</link>
+    <description>Recent content in zettelkasten on Reza Amashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Reza Amashi ©</copyright>
+    <lastBuildDate>Fri, 28 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/library_tags/zettelkasten/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Take Smart Notes</title>
+      <link>https://rezaamashi.github.io/library/sonkeahrens791/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/sonkeahrens791/</guid>
+      <description>How to become an efficient content machine</description>
+    </item>
+    
+  </channel>
+</rss>

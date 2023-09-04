@@ -1,1 +1,129 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Reza Amashi</title><link>https://rezaamashi.github.io/</link><description>Recent content on Reza Amashi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Reza Amashi ©</copyright><lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>The Practice of Digital Gardening</title><link>https://rezaamashi.github.io/garden/digital-garden-practice/</link><pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate><guid>https://rezaamashi.github.io/garden/digital-garden-practice/</guid><description>What make it different from normal blogging?</description></item><item><title>Hello World!</title><link>https://rezaamashi.github.io/garden/hello-world/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://rezaamashi.github.io/garden/hello-world/</guid><description>How I set up this beautiful website with Org-mode and Hugo</description></item><item><title>Reza Amashi</title><link>https://rezaamashi.github.io/about/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://rezaamashi.github.io/about/</guid><description>An avid surfer who codes between the waves.</description></item><item><title>Setting up Plymouth in Runit</title><link>https://rezaamashi.github.io/projects/plymouth_runit/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://rezaamashi.github.io/projects/plymouth_runit/</guid><description>How to set up Plymouth on Artix-Runit</description></item><item><title>Writing Undergraduate Thesis in Org-mode</title><link>https://rezaamashi.github.io/projects/ugrad-thesis/</link><pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate><guid>https://rezaamashi.github.io/projects/ugrad-thesis/</guid><description>How I use org-mode for everything, yes Everything, regarding my thesis</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reza Amashi</title>
+    <link>https://rezaamashi.github.io/</link>
+    <description>Recent content on Reza Amashi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Reza Amashi ©</copyright>
+    <lastBuildDate>Mon, 04 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Super Thinking</title>
+      <link>https://rezaamashi.github.io/library/gabrielweinberg987/</link>
+      <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/gabrielweinberg987/</guid>
+      <description>Stuff up your toolbox for effective thinking</description>
+    </item>
+    
+    <item>
+      <title>The Rich Sons</title>
+      <link>https://rezaamashi.github.io/garden/rich-sons/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/rich-sons/</guid>
+      <description>The Story of Personal Developmental Hiccups Run Awry</description>
+    </item>
+    
+    <item>
+      <title>The Practice of Digital Gardening</title>
+      <link>https://rezaamashi.github.io/garden/digital-garden-practice/</link>
+      <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/digital-garden-practice/</guid>
+      <description>What make it different from normal blogging?</description>
+    </item>
+    
+    <item>
+      <title>On Attention Economy &amp; Goldfish Generation</title>
+      <link>https://rezaamashi.github.io/garden/attention-and-goldfish/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/attention-and-goldfish/</guid>
+      <description>Dopamine superstimulation &amp;amp; the increased value of attention</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://rezaamashi.github.io/garden/hello-world/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/garden/hello-world/</guid>
+      <description>How I set up this beautiful website with Org-mode and Hugo</description>
+    </item>
+    
+    <item>
+      <title>Reza Amashi</title>
+      <link>https://rezaamashi.github.io/about/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/about/</guid>
+      <description>An avid surfer who codes between the waves.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Plymouth in Runit</title>
+      <link>https://rezaamashi.github.io/projects/plymouth_runit/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/projects/plymouth_runit/</guid>
+      <description>How to set up Plymouth on Artix-Runit</description>
+    </item>
+    
+    <item>
+      <title>Writing Undergraduate Thesis in Org-mode</title>
+      <link>https://rezaamashi.github.io/projects/ugrad-thesis/</link>
+      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/projects/ugrad-thesis/</guid>
+      <description>How I use org-mode for everything, yes Everything, regarding my thesis</description>
+    </item>
+    
+    <item>
+      <title>Free Will</title>
+      <link>https://rezaamashi.github.io/library/samharris740/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/samharris740/</guid>
+      <description>Reconciling with the Deterministic Reality of Being Human</description>
+    </item>
+    
+    <item>
+      <title>Unscripted</title>
+      <link>https://rezaamashi.github.io/library/mjdemarco1144/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/mjdemarco1144/</guid>
+      <description>Life is to be lived not squandered on a meaningless 9-5 until you get old</description>
+    </item>
+    
+    <item>
+      <title>So Good They Can&#39;t Ignore You</title>
+      <link>https://rezaamashi.github.io/library/calnewport1087/</link>
+      <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/calnewport1087/</guid>
+      <description>Get good, be well compensated, then you will be happy</description>
+    </item>
+    
+    <item>
+      <title>The 48 Law of Power</title>
+      <link>https://rezaamashi.github.io/library/robertgreene751/</link>
+      <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/robertgreene751/</guid>
+      <description>Power tend to corrupt, so how do you navigate it?</description>
+    </item>
+    
+    <item>
+      <title>How to Take Smart Notes</title>
+      <link>https://rezaamashi.github.io/library/sonkeahrens791/</link>
+      <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/library/sonkeahrens791/</guid>
+      <description>How to become an efficient content machine</description>
+    </item>
+    
+  </channel>
+</rss>
