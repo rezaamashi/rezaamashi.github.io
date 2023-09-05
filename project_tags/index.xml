@@ -7,13 +7,40 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amashi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/project_tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/project_tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>emacs</title>
+      <title>Emacs</title>
       <link>https://rezaamashi.github.io/project_tags/emacs/</link>
-      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://rezaamashi.github.io/project_tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://rezaamashi.github.io/project_tags/hugo/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/project_tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Org-mode</title>
+      <link>https://rezaamashi.github.io/project_tags/org-mode/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/project_tags/org-mode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project</title>
+      <link>https://rezaamashi.github.io/project_tags/project/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/project_tags/project/</guid>
       <description></description>
     </item>
     
@@ -32,15 +59,6 @@
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://rezaamashi.github.io/project_tags/linux-ricing-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>org-mode</title>
-      <link>https://rezaamashi.github.io/project_tags/org-mode/</link>
-      <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://rezaamashi.github.io/project_tags/org-mode/</guid>
       <description></description>
     </item>
     

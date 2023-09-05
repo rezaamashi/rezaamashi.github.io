@@ -9,6 +9,15 @@
     <copyright>Reza Amashi ©</copyright>
     <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Becoming Prolific Content Machine with Emacs and Org-Hugo</title>
+      <link>https://rezaamashi.github.io/projects/becoming-prolific-content-machine-w-emacs/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rezaamashi.github.io/projects/becoming-prolific-content-machine-w-emacs/</guid>
+      <description>How I set up my Hugo for Easier Content Creation</description>
+    </item>
+    
+    <item>
       <title>Setting up Plymouth in Runit</title>
       <link>https://rezaamashi.github.io/projects/plymouth_runit/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>

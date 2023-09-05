@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WRSJECV048"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-WRSJECV048');
+    </script>
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link disabled id="dark-mode-theme" rel="stylesheet" href="https://rezaamashi.github.io/css/dark.css">
+    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://rezaamashi.github.io/css/my_style.css">
+    
+    
+    
+    <title>Reza Amashi | Becoming Prolific Content Machine with Emacs and Org-Hugo</title>
+    <meta name="description" content="How I set up my Hugo for Easier Content Creation">
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="https://rezaamashi.github.io/">
+            
+            <b style="font-weight: 800;">RA</b>
+            
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0"><li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/garden/"> Digital Garden</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/projects/"> Projects</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/library/"> Library</a>
+                </li>
+            <li class='nav-item '>
+                    <a class="nav-link" href="https://rezaamashi.github.io/about/"> About</a>
+                </li>
+             
+            <li class="nav-item px-2 pt-1">
+                <a class="btn fas fa-moon" id="dark-mode-toggle"></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+</nav><div id="content">
+
+<div class="container" style="max-width: 800px;">
+    <div class="py-4 rounded-3">
+        <div class="container-fluid py-2">
+            <h1 class="display-2 mb-4 text-center">Becoming Prolific Content Machine with Emacs and Org-Hugo</h1>
+        </div>
+        
+        <p class="text-center fs-4 fst-italic serif">How I set up my Hugo for Easier Content Creation</p>
+        
+        <div class="text-center pt-4">
+            
+        </div>
+    </div>
+    <div class="row justify-content-center mb-5">
+        <div class="col-12">
+            <p class="card-date m-0">
+                
+                
+                    Created Sep 5, 2023 - 
+                
+                Last updated: Sep 5, 2023
+            </p>
+            <hr class="dropdown-divider">
+            <div class="row justify-content-between">
+                <div class="col-sm-4">
+                    
+    
+    <span class="status">Seeding 🌱</span>
+    
+
+                </div>
+                <div class="col-sm-8" style="text-align: right;">
+                    
+                
+                
+                    
+                    <span class="badge tag-badge">Project</span>
+                    
+                    <span class="badge tag-badge">Org-mode</span>
+                    
+                    <span class="badge tag-badge">Emacs</span>
+                    
+                    <span class="badge tag-badge">Hugo</span>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid py-2">
+        <div class="serif main-content">
+            <p>Hello beautiful people! This article is the continuation of <a href="https://rezaamashi.github.io/garden/hello-world/">Hello World</a> article where I explain on how to set up <code>ox-hugo</code> for your own personal blog development. It&rsquo;s been a while since that article up and I have made some adjustment to make the process of idea consolidation to idea publication much more seamless and easier. In this article, I, rezaamashi, will explain how I set up some function to help me write blog contents easily.</p>
+<div class="ox-hugo-toc toc">
+<div class="heading">Table of Contents</div>
+<ul>
+<li><a href="#easily-create-new-digital-garden-post-and-projects-blog">Easily Create New Digital Garden Post and Projects Blog</a></li>
+<li><a href="#easily-write-book-review">Easily write Book Review</a></li>
+<li><a href="#browse-content-org-easily-in-emacs">Browse <code>content-org</code> easily in emacs</a></li>
+<li><a href="#verdict">Verdict</a></li>
+</ul>
+</div>
+<!--endtoc-->
+<h2 id="easily-create-new-digital-garden-post-and-projects-blog">Easily Create New Digital Garden Post and Projects Blog</h2>
+<p>Functions to quickly create a new blog post. This depends on <code>org-hugo</code> and <code>yas-snippet</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defvar</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;~/org/website/mein-site&#34;</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">rz/blog-new-garden</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#34;Create a new </span><span style="color:#d88200">`org&#39;</span><span style="color:#d88200"> file for sharing ideas in your blog&#39;s digital garden.&#34;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">blog-garden-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;/content-org/garden&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">blog-garden-file</span> <span style="color:#111">(</span><span style="color:#75af00">read-from-minibuffer</span> <span style="color:#d88200">&#34;What is the name of your garden file \(use kebab-case\):&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">split-window-right</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">find-file</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">blog-garden-dir</span> <span style="color:#d88200">&#34;/&#34;</span> <span style="color:#111">blog-garden-file</span> <span style="color:#d88200">&#34;.org&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">insert</span> <span style="color:#111">(</span><span style="color:#111">yas-expand-snippet</span> <span style="color:#111">(</span><span style="color:#111">yas-lookup-snippet</span> <span style="color:#d88200">&#34;hugogarden&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">save-buffer</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">message</span> <span style="color:#d88200">&#34;Happy sharing your garden of ideas, Reza!&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">rz/blog-new-project</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span> <span style="color:#d88200">&#34;Create a new </span><span style="color:#d88200">`org&#39;</span><span style="color:#d88200"> file for sharing project in your blog.&#34;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">blog-projects-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;/content-org/projects&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#111">blog-projects-file</span> <span style="color:#111">(</span><span style="color:#75af00">read-from-minibuffer</span> <span style="color:#d88200">&#34;What is the name of your project file \(use kebab-case\):&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">split-window-right</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">find-file</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">blog-projects-dir</span> <span style="color:#d88200">&#34;/&#34;</span> <span style="color:#111">blog-projects-file</span> <span style="color:#d88200">&#34;.org&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">insert</span> <span style="color:#111">(</span><span style="color:#111">yas-expand-snippet</span> <span style="color:#111">(</span><span style="color:#111">yas-lookup-snippet</span> <span style="color:#d88200">&#34;hugoproject&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">save-buffer</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#75af00">message</span> <span style="color:#d88200">&#34;Happy sharing your project, Reza!&#34;</span><span style="color:#111">)))</span>
+</span></span></code></pre></div><p>Make sure to have the proper snippets installed, Here is one example for Garden Plan</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#75715e"># -*- mode: snippet -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># name: hugogarden</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># uuid: hugogarden</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># key: hugogarden</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># condition: t</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+TITLE: ${1:`(file-name-nondirectory (file-name-sans-extension buffer-file-name))`}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+AUTHOR: `(user-full-name)`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+date: `(format-time-string &#34;%Y-%m-%d&#34;)`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+STARTUP: content</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+HUGO_DRAFT: true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+HUGO_CUSTOM_FRONT_MATTER: :summary &#34;${3:Summary}&#34; :garden_tags &#39;(${4:Tags}) :status seeding</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">`%`$0</span>
+</span></span></code></pre></div><h2 id="easily-write-book-review">Easily write Book Review</h2>
+<p>I have my book collection managed with Calibre and Zotero. Those two program produced nice <a href="https://www.bibtex.org/">BibTeX</a> files for my Zettelkasten set up in <a href="https://www.orgroam.com/">Org-Roam</a>, handled by <code>org-roam-bibtex</code>. In such everything in my library is neatly structured and stored. So why would I need to write everything from scratch and looking for cover manually? I won&rsquo;t. Here is the function that make that magic happens (As with all of my Emacs setting you could see that in my <a href="https://github.com/rezaamashi/doom-emacs">doom-emacs config repo</a>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">rz/blog-book-review</span> <span style="color:#111">(</span><span style="color:#111">citekey</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Function to create a new blog file for book review. Handles
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">folder creation and book cover copy for a seamless book
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">reviewing. Decided to not make this </span><span style="color:#d88200">`interactive&#39;</span><span style="color:#d88200"> as it could
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">only be executed through </span><span style="color:#d88200">`orb-note-action&#39;</span><span style="color:#d88200">. NOTE: </span><span style="color:#d88200">`citekey&#39;</span><span style="color:#d88200"> is only
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200">passed but not used just because it is automatically passed by
+</span></span></span><span style="display:flex;"><span><span style="color:#d88200"></span><span style="color:#d88200">`orb-note-action&#39;</span><span style="color:#d88200">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">;; Variable Definition</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">let*</span> <span style="color:#111">((</span><span style="color:#111">book-review-org-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;/content-org/library&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">book-review-md-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;/content/library&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">book-calibre-id</span> <span style="color:#111">(</span><span style="color:#111">file-name-sans-extension</span> <span style="color:#111">(</span><span style="color:#75af00">file-name-nondirectory</span> <span style="color:#75af00">buffer-file-name</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">book-review-org-id-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">book-review-org-dir</span> <span style="color:#d88200">&#34;/&#34;</span> <span style="color:#111">book-calibre-id</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">book-review-md-id-dir</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">book-review-md-dir</span> <span style="color:#d88200">&#34;/&#34;</span> <span style="color:#111">book-calibre-id</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">cover-from</span> <span style="color:#111">(</span><span style="color:#111">save-excursion</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#111">(</span><span style="color:#75af00">goto-char</span> <span style="color:#111">(</span><span style="color:#75af00">point-min</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">;; Since my cover link are within the `Cover&#39; header</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#111">(</span><span style="color:#111">when</span> <span style="color:#111">(</span><span style="color:#75af00">re-search-forward</span> <span style="color:#d88200">&#34;^\\*\\s-+Cover\\s-*$&#34;</span> <span style="color:#00a8c8">nil</span> <span style="color:#00a8c8">t</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                          <span style="color:#111">(</span><span style="color:#111">org-next-link</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>                          <span style="color:#111">(</span><span style="color:#111">org-element-property</span> <span style="color:#111">:path</span> <span style="color:#111">(</span><span style="color:#111">org-element-context</span><span style="color:#111">)))))</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#111">(</span><span style="color:#111">cover-to</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">book-review-md-id-dir</span> <span style="color:#d88200">&#34;/featured.jpg&#34;</span><span style="color:#111">)))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">;; create the folder if it is not exists</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#75af00">file-exists-p</span> <span style="color:#111">book-review-org-dir</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">make-directory</span> <span style="color:#111">book-review-org-dir</span> <span style="color:#00a8c8">t</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#75af00">file-exists-p</span> <span style="color:#111">book-review-md-dir</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">make-directory</span> <span style="color:#111">book-review-md-dir</span> <span style="color:#00a8c8">t</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#75af00">file-exists-p</span> <span style="color:#111">book-review-md-id-dir</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">make-directory</span> <span style="color:#111">book-review-md-id-dir</span> <span style="color:#00a8c8">t</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#75af00">file-exists-p</span> <span style="color:#111">book-review-org-id-dir</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#111">make-directory</span> <span style="color:#111">book-review-org-id-dir</span> <span style="color:#00a8c8">t</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">;; copy the cover from calibre if it is not already</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">unless</span> <span style="color:#111">(</span><span style="color:#75af00">file-exists-p</span> <span style="color:#111">cover-to</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#111">(</span><span style="color:#75af00">copy-file</span> <span style="color:#111">cover-from</span> <span style="color:#111">cover-to</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">;; also create a new split buffer for the whole thing while keeping the old one</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">;; opened to allow easier review</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">split-window-right</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">find-file</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">book-review-org-id-dir</span> <span style="color:#d88200">&#34;/index.org&#34;</span><span style="color:#111">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">;; only insert snippet in new file</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">if</span> <span style="color:#111">(</span><span style="color:#75af00">=</span> <span style="color:#111">(</span><span style="color:#75af00">buffer-size</span><span style="color:#111">)</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#111">(</span><span style="color:#75af00">insert</span> <span style="color:#111">(</span><span style="color:#111">yas-expand-snippet</span> <span style="color:#111">(</span><span style="color:#111">yas-lookup-snippet</span> <span style="color:#d88200">&#34;hugolib&#34;</span><span style="color:#111">))))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#111">save-buffer</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#111">(</span><span style="color:#75af00">message</span> <span style="color:#d88200">&#34;Happy sharing your book review, Reza!&#34;</span><span style="color:#111">)))</span>
+</span></span></code></pre></div><p>Also make sure to have <code>hugolib</code> snippet in <code>yas-snippet</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cfg" data-lang="cfg"><span style="display:flex;"><span><span style="color:#75715e"># -*- mode: snippet -*-</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># name: hugolib</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># uuid: hugolib</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># key: hugolib</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># condition: t</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+TITLE: ${1:Book title}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+AUTHOR: ${2:Book author}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+date: `(format-time-string &#34;%Y-%m-%d&#34;)`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+STARTUP: content</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+HUGO_SECTION: library/`(file-name-nondirectory (directory-file-name (file-name-directory buffer-file-name)))`</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+HUGO_DRAFT: true</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#+HUGO_CUSTOM_FRONT_MATTER: :summary &#34;${3:Summary}&#34; :library_tags &#39;(${4:Tags}) :status seeding</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75af00">`%`$0</span>
+</span></span></code></pre></div><p>Instead of thinking about where to put the new keybinding, I decided to just add it into <code>org-roam-bibtex</code> as this is where I am most likely start building up on the idea to write a book review.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">add-to-list</span> <span style="color:#d88200">&#39;orb-note-actions-user</span> <span style="color:#f92672">&#39;</span><span style="color:#111">(</span><span style="color:#d88200">&#34;Share a review of this book in blog&#34;</span> <span style="color:#f92672">.</span> <span style="color:#111">rz/blog-book-review</span><span style="color:#111">))</span>
+</span></span></code></pre></div><h2 id="browse-content-org-easily-in-emacs">Browse <code>content-org</code> easily in emacs</h2>
+<p>This is more of a bonus information on how I use <code>doom-project-find-file</code> to specifically browse file within my <code>content-org</code> directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span style="display:flex;"><span><span style="color:#111">(</span><span style="color:#111">defun</span> <span style="color:#111">rz/find-file-in-hugo-content-org</span> <span style="color:#111">()</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#d88200">&#34;Search file within </span><span style="color:#d88200">`content-org&#39;</span><span style="color:#d88200"> in my personal blog.&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">interactive</span><span style="color:#111">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#111">(</span><span style="color:#111">doom-project-find-file</span> <span style="color:#111">(</span><span style="color:#75af00">concat</span> <span style="color:#111">mein-site-dir</span> <span style="color:#d88200">&#34;/content-org/&#34;</span><span style="color:#111">)))</span>
+</span></span></code></pre></div><h2 id="verdict">Verdict</h2>
+<p>All of this quality of life improvement could help me provide more content to all of you beautiful people out there faster and made me much happier.</p>
+
+        </div>
+    </div>
+            <hr class="dropdown-divider">
+            <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rezaamashi" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+
+
+        </div><div class="container">
+    <div class="row justify-content-between">
+        <div class="col-sm-4">
+            <p class="footer">Reza Amashi © 2023 </p>
+        </div>
+        <div class="col-sm-6 d-flex flex-row-reverse">
+            
+            <a class="footer-social px-2"  href="https://rezaamashi.github.io/index.xml" target="_blank"><i class="fa fa-rss"></i></a>
+            
+            <a class="footer-social px-2"  href="https://twitter.com/mnurreza" target="_blank"><i class="fab fa-twitter"></i></a>
+            
+            <a class="footer-social px-2"  href="https://instagram.com/amasyi.reza" target="_blank"><i class="fab fa-instagram"></i></a>
+            
+            <a class="footer-social px-2"  href="https://github.com/rezaamashi" target="_blank"><i class="fab fa-github"></i></a>
+            
+            <a class="footer-social px-2"  href="https://linkedin.com/in/reza-amasyi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://rezaamashi.github.io/js/dark.js"></script>
+<script src="https://rezaamashi.github.io/js/isotope.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.6.3/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</body>
+</html>
