@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Literatures on Reza Amashi</title>
-    <link>https://rezaamashi.github.io/literature/</link>
-    <description>Recent content in Literatures on Reza Amashi</description>
+    <title>Literatures on Reza Amasyi</title>
+    <link>https://www.rezaamasyi.me/literature/</link>
+    <description>Recent content in Literatures on Reza Amasyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Reza Amashi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/literature/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Reza Amasyi ©</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/literature/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

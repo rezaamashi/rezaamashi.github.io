@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Reza Amashi</title>
-    <link>https://rezaamashi.github.io/project_tags/linux/</link>
-    <description>Recent content in linux on Reza Amashi</description>
+    <title>linux on Reza Amasyi</title>
+    <link>https://www.rezaamasyi.me/project_tags/linux/</link>
+    <description>Recent content in linux on Reza Amasyi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Reza Amashi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rezaamashi.github.io/project_tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Reza Amasyi ©</copyright>
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/project_tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up Plymouth in Runit</title>
-      <link>https://rezaamashi.github.io/projects/plymouth_runit/</link>
+      <link>https://www.rezaamasyi.me/projects/plymouth_runit/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://rezaamashi.github.io/projects/plymouth_runit/</guid>
+      <guid>https://www.rezaamasyi.me/projects/plymouth_runit/</guid>
       <description>How to set up Plymouth on Artix-Runit</description>
     </item>
     
     <item>
       <title>Writing Undergraduate Thesis in Org-mode</title>
-      <link>https://rezaamashi.github.io/projects/ugrad-thesis/</link>
+      <link>https://www.rezaamasyi.me/projects/ugrad-thesis/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://rezaamashi.github.io/projects/ugrad-thesis/</guid>
+      <guid>https://www.rezaamasyi.me/projects/ugrad-thesis/</guid>
       <description>How I use org-mode for everything, yes Everything, regarding my thesis</description>
     </item>
     
