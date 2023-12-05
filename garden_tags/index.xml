@@ -7,150 +7,126 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/garden_tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/garden_tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philosophy</title>
+      <link>https://www.rezaamasyi.me/garden_tags/philosophy/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/garden_tags/philosophy/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Article</title>
       <link>https://www.rezaamasyi.me/garden_tags/article/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/article/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Jungian</title>
       <link>https://www.rezaamasyi.me/garden_tags/jungian/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/jungian/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Masculinity</title>
       <link>https://www.rezaamasyi.me/garden_tags/masculinity/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/masculinity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Personal-Development</title>
       <link>https://www.rezaamasyi.me/garden_tags/personal-development/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/personal-development/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Psychology</title>
       <link>https://www.rezaamasyi.me/garden_tags/psychology/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/psychology/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>bloggin</title>
       <link>https://www.rezaamasyi.me/garden_tags/bloggin/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/bloggin/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>digital garden</title>
       <link>https://www.rezaamasyi.me/garden_tags/digital-garden/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/digital-garden/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>attention</title>
       <link>https://www.rezaamasyi.me/garden_tags/attention/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/attention/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>economics</title>
       <link>https://www.rezaamasyi.me/garden_tags/economics/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/economics/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>lifestyle</title>
       <link>https://www.rezaamasyi.me/garden_tags/lifestyle/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/lifestyle/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>post-modernism</title>
       <link>https://www.rezaamasyi.me/garden_tags/post-modernism/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/post-modernism/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>emacs</title>
       <link>https://www.rezaamasyi.me/garden_tags/emacs/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/emacs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>github</title>
       <link>https://www.rezaamasyi.me/garden_tags/github/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/github/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>hugo</title>
       <link>https://www.rezaamasyi.me/garden_tags/hugo/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>linux</title>
       <link>https://www.rezaamasyi.me/garden_tags/linux/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>org-mode</title>
       <link>https://www.rezaamasyi.me/garden_tags/org-mode/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden_tags/org-mode/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

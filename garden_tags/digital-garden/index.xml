@@ -7,24 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/garden_tags/digital-garden/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/garden_tags/digital-garden/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Practice of Digital Gardening</title>
       <link>https://www.rezaamasyi.me/garden/digital-garden-practice/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/digital-garden-practice/</guid>
       <description>What make it different from normal blogging?</description>
     </item>
-    
     <item>
       <title>Hello World!</title>
       <link>https://www.rezaamasyi.me/garden/hello-world/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/hello-world/</guid>
       <description>How I set up this beautiful website with Org-mode and Hugo</description>
     </item>
-    
   </channel>
 </rss>

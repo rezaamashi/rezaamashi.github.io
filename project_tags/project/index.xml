@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/project_tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/project_tags/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Becoming Prolific Content Machine with Emacs and Org-Hugo</title>
       <link>https://www.rezaamasyi.me/projects/becoming-prolific-content-machine-w-emacs/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/projects/becoming-prolific-content-machine-w-emacs/</guid>
       <description>How I set up my Hugo for Easier Content Creation</description>
     </item>
-    
   </channel>
 </rss>

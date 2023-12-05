@@ -7,42 +7,42 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/garden/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/garden/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meditation on Finitude of Life</title>
+      <link>https://www.rezaamasyi.me/garden/meditation-on-finitude-of-life/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/garden/meditation-on-finitude-of-life/</guid>
+      <description>My journey on reconsiliation with the finitude reality of life and living</description>
+    </item>
     <item>
       <title>The Rich Sons</title>
       <link>https://www.rezaamasyi.me/garden/rich-sons/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/rich-sons/</guid>
       <description>The Story of Personal Developmental Hiccups Run Awry</description>
     </item>
-    
     <item>
       <title>The Practice of Digital Gardening</title>
       <link>https://www.rezaamasyi.me/garden/digital-garden-practice/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/digital-garden-practice/</guid>
       <description>What make it different from normal blogging?</description>
     </item>
-    
     <item>
       <title>On Attention Economy &amp; Goldfish Generation</title>
       <link>https://www.rezaamasyi.me/garden/attention-and-goldfish/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/attention-and-goldfish/</guid>
       <description>Dopamine superstimulation &amp;amp; the increased value of attention</description>
     </item>
-    
     <item>
       <title>Hello World!</title>
       <link>https://www.rezaamasyi.me/garden/hello-world/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/hello-world/</guid>
       <description>How I set up this beautiful website with Org-mode and Hugo</description>
     </item>
-    
   </channel>
 </rss>

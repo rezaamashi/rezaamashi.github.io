@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/project_tags/linux-ricing-series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/project_tags/linux-ricing-series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up Plymouth in Runit</title>
       <link>https://www.rezaamasyi.me/projects/plymouth_runit/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/projects/plymouth_runit/</guid>
       <description>How to set up Plymouth on Artix-Runit</description>
     </item>
-    
   </channel>
 </rss>

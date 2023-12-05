@@ -7,141 +7,133 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Four Thousand Weeks</title>
+      <link>https://www.rezaamasyi.me/library/oliverburkeman1221/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/library/oliverburkeman1221/</guid>
+      <description>Managing Time as in Managing Life</description>
+    </item>
+    <item>
+      <title>Managing My History with org-journal</title>
+      <link>https://www.rezaamasyi.me/projects/managing-my-history-with-org-journal/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/projects/managing-my-history-with-org-journal/</guid>
+      <description>How I set up my org-journal</description>
+    </item>
+    <item>
+      <title>Meditation on Finitude of Life</title>
+      <link>https://www.rezaamasyi.me/garden/meditation-on-finitude-of-life/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/garden/meditation-on-finitude-of-life/</guid>
+      <description>My journey on reconsiliation with the finitude reality of life and living</description>
+    </item>
     <item>
       <title>Becoming Prolific Content Machine with Emacs and Org-Hugo</title>
       <link>https://www.rezaamasyi.me/projects/becoming-prolific-content-machine-w-emacs/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/projects/becoming-prolific-content-machine-w-emacs/</guid>
       <description>How I set up my Hugo for Easier Content Creation</description>
     </item>
-    
     <item>
       <title>Steal Like an Artist</title>
       <link>https://www.rezaamasyi.me/library/austinkleon1176/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/austinkleon1176/</guid>
       <description>Start creating stop reminiscing</description>
     </item>
-    
     <item>
       <title>Super Thinking</title>
       <link>https://www.rezaamasyi.me/library/gabrielweinberg987/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/gabrielweinberg987/</guid>
       <description>Stuff up your toolbox for effective thinking</description>
     </item>
-    
     <item>
       <title>The Rich Sons</title>
       <link>https://www.rezaamasyi.me/garden/rich-sons/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/rich-sons/</guid>
       <description>The Story of Personal Developmental Hiccups Run Awry</description>
     </item>
-    
     <item>
       <title>The Practice of Digital Gardening</title>
       <link>https://www.rezaamasyi.me/garden/digital-garden-practice/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/digital-garden-practice/</guid>
       <description>What make it different from normal blogging?</description>
     </item>
-    
     <item>
       <title>On Attention Economy &amp; Goldfish Generation</title>
       <link>https://www.rezaamasyi.me/garden/attention-and-goldfish/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/attention-and-goldfish/</guid>
       <description>Dopamine superstimulation &amp;amp; the increased value of attention</description>
     </item>
-    
     <item>
       <title>Hello World!</title>
       <link>https://www.rezaamasyi.me/garden/hello-world/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/garden/hello-world/</guid>
       <description>How I set up this beautiful website with Org-mode and Hugo</description>
     </item>
-    
     <item>
       <title>Reza Amasyi</title>
       <link>https://www.rezaamasyi.me/about/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/about/</guid>
       <description>An avid surfer who codes between the waves.</description>
     </item>
-    
     <item>
       <title>Setting up Plymouth in Runit</title>
       <link>https://www.rezaamasyi.me/projects/plymouth_runit/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/projects/plymouth_runit/</guid>
       <description>How to set up Plymouth on Artix-Runit</description>
     </item>
-    
     <item>
       <title>Writing Undergraduate Thesis in Org-mode</title>
       <link>https://www.rezaamasyi.me/projects/ugrad-thesis/</link>
       <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/projects/ugrad-thesis/</guid>
       <description>How I use org-mode for everything, yes Everything, regarding my thesis</description>
     </item>
-    
     <item>
       <title>Free Will</title>
       <link>https://www.rezaamasyi.me/library/samharris740/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/samharris740/</guid>
       <description>Reconciling with the Deterministic Reality of Being Human</description>
     </item>
-    
     <item>
       <title>Unscripted</title>
       <link>https://www.rezaamasyi.me/library/mjdemarco1144/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/mjdemarco1144/</guid>
       <description>Life is to be lived not squandered on a meaningless 9-5 until you get old</description>
     </item>
-    
     <item>
       <title>So Good They Can&#39;t Ignore You</title>
       <link>https://www.rezaamasyi.me/library/calnewport1087/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/calnewport1087/</guid>
       <description>Get good, be well compensated, then you will be happy</description>
     </item>
-    
     <item>
       <title>The 48 Law of Power</title>
       <link>https://www.rezaamasyi.me/library/robertgreene751/</link>
       <pubDate>Wed, 28 Jul 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/robertgreene751/</guid>
       <description>Power tend to corrupt, so how do you navigate it?</description>
     </item>
-    
     <item>
       <title>How to Take Smart Notes</title>
       <link>https://www.rezaamasyi.me/library/sonkeahrens791/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library/sonkeahrens791/</guid>
       <description>How to become an efficient content machine</description>
     </item>
-    
   </channel>
 </rss>

@@ -7,141 +7,119 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Reza Amasyi ©</copyright>
-    <lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.rezaamasyi.me/library_tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://www.rezaamasyi.me/library_tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Philosophy</title>
+      <link>https://www.rezaamasyi.me/library_tags/philosophy/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/library_tags/philosophy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-help</title>
+      <link>https://www.rezaamasyi.me/library_tags/self-help/</link>
+      <pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://www.rezaamasyi.me/library_tags/self-help/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Book-Review</title>
       <link>https://www.rezaamasyi.me/library_tags/book-review/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/book-review/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Creativity</title>
       <link>https://www.rezaamasyi.me/library_tags/creativity/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/creativity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Originality</title>
       <link>https://www.rezaamasyi.me/library_tags/originality/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/originality/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>critical-thought</title>
       <link>https://www.rezaamasyi.me/library_tags/critical-thought/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/critical-thought/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>mental-model</title>
       <link>https://www.rezaamasyi.me/library_tags/mental-model/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/mental-model/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Determinism</title>
       <link>https://www.rezaamasyi.me/library_tags/determinism/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/determinism/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>human-nature</title>
       <link>https://www.rezaamasyi.me/library_tags/human-nature/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/human-nature/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>machiavellian</title>
       <link>https://www.rezaamasyi.me/library_tags/machiavellian/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/machiavellian/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Philosophy</title>
-      <link>https://www.rezaamasyi.me/library_tags/philosophy/</link>
-      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.rezaamasyi.me/library_tags/philosophy/</guid>
-      <description></description>
-    </item>
-    
     <item>
       <title>power</title>
       <link>https://www.rezaamasyi.me/library_tags/power/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/power/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>career</title>
       <link>https://www.rezaamasyi.me/library_tags/career/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/career/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>mastery</title>
       <link>https://www.rezaamasyi.me/library_tags/mastery/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/mastery/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>passion-hypothesis</title>
       <link>https://www.rezaamasyi.me/library_tags/passion-hypothesis/</link>
       <pubDate>Sat, 28 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/passion-hypothesis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>note taking</title>
       <link>https://www.rezaamasyi.me/library_tags/note-taking/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/note-taking/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>zettelkasten</title>
       <link>https://www.rezaamasyi.me/library_tags/zettelkasten/</link>
       <pubDate>Fri, 28 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://www.rezaamasyi.me/library_tags/zettelkasten/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
